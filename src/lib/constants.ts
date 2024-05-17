@@ -30,7 +30,7 @@ export const FILTER_DAY = 'filter-day';
 export const FILTER_RANGE = 'filter-range';
 export const FILTER_REFERRERS = 'filter-referrers';
 export const FILTER_PAGES = 'filter-pages';
-export const UNIT_TYPES = ['year', 'month', 'hour', 'day'];
+export const UNIT_TYPES = ['year', 'month', 'hour', 'day', 'minute'];
 export const EVENT_COLUMNS = ['url', 'referrer', 'title', 'query', 'event'];
 
 export const SESSION_COLUMNS = [
@@ -94,6 +94,13 @@ export const OPERATORS = {
   after: 'af',
 } as const;
 
+export const OPERATOR_PREFIXES = {
+  [OPERATORS.equals]: '',
+  [OPERATORS.notEquals]: '!',
+  [OPERATORS.contains]: '~',
+  [OPERATORS.doesNotContain]: '!~',
+};
+
 export const DATA_TYPES = {
   [DATA_TYPE.string]: 'string',
   [DATA_TYPE.number]: 'number',
@@ -106,6 +113,7 @@ export const REPORT_TYPES = {
   funnel: 'funnel',
   insights: 'insights',
   retention: 'retention',
+  utm: 'utm',
 } as const;
 
 export const REPORT_PARAMETERS = {
@@ -124,6 +132,7 @@ export const ROLES = {
   user: 'user',
   viewOnly: 'view-only',
   teamOwner: 'team-owner',
+  teamManager: 'team-manager',
   teamMember: 'team-member',
   teamViewOnly: 'team-view-only',
 } as const;
@@ -150,6 +159,12 @@ export const ROLE_PERMISSIONS = {
   [ROLES.teamOwner]: [
     PERMISSIONS.teamUpdate,
     PERMISSIONS.teamDelete,
+    PERMISSIONS.websiteCreate,
+    PERMISSIONS.websiteUpdate,
+    PERMISSIONS.websiteDelete,
+  ],
+  [ROLES.teamManager]: [
+    PERMISSIONS.teamUpdate,
     PERMISSIONS.websiteCreate,
     PERMISSIONS.websiteUpdate,
     PERMISSIONS.websiteDelete,
@@ -193,7 +208,7 @@ export const THEME_COLORS = {
   },
 };
 
-export const EVENT_COLORS = [
+export const CHART_COLORS = [
   '#2680eb',
   '#9256d9',
   '#44b556',
@@ -224,7 +239,10 @@ export const LAPTOP_SCREEN_WIDTH = 1024;
 export const MOBILE_SCREEN_WIDTH = 479;
 
 export const URL_LENGTH = 500;
+export const PAGE_TITLE_LENGTH = 500;
 export const EVENT_NAME_LENGTH = 50;
+
+export const UTM_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
 
 export const DESKTOP_OS = [
   'BeOS',
