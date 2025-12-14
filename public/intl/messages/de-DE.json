@@ -11,7 +11,7 @@
       "value": "Aktionen"
     }
   ],
-  "label.activity-log": [
+  "label.activity": [
     {
       "type": 0,
       "value": "Aktivitätsverlauf"
@@ -23,6 +23,12 @@
       "value": "Hinzufügen"
     }
   ],
+  "label.add-board": [
+    {
+      "type": 0,
+      "value": "Board hinzufügen"
+    }
+  ],
   "label.add-description": [
     {
       "type": 0,
@@ -32,13 +38,13 @@
   "label.add-member": [
     {
       "type": 0,
-      "value": "Add member"
+      "value": "Mitglied hinzufügen"
     }
   ],
   "label.add-step": [
     {
       "type": 0,
-      "value": "Add step"
+      "value": "Schritt hinzufügen"
     }
   ],
   "label.add-website": [
@@ -51,6 +57,12 @@
     {
       "type": 0,
       "value": "Administrator"
+    }
+  ],
+  "label.affiliate": [
+    {
+      "type": 0,
+      "value": "Partnerprogramm"
     }
   ],
   "label.after": [
@@ -74,19 +86,31 @@
   "label.analytics": [
     {
       "type": 0,
-      "value": "Analytics"
+      "value": "Analysen"
+    }
+  ],
+  "label.apply": [
+    {
+      "type": 0,
+      "value": "Anwenden"
+    }
+  ],
+  "label.attribution": [
+    {
+      "type": 0,
+      "value": "Zuordnung"
+    }
+  ],
+  "label.attribution-description": [
+    {
+      "type": 0,
+      "value": "Sehen Sie, wie Nutzer mit Ihrem Marketing interagieren und was zu Konversionen führt."
     }
   ],
   "label.average": [
     {
       "type": 0,
       "value": "Durchschnitt"
-    }
-  ],
-  "label.average-visit-time": [
-    {
-      "type": 0,
-      "value": "Durchschn. Besuchszeit"
     }
   ],
   "label.back": [
@@ -101,6 +125,12 @@
       "value": "Vor"
     }
   ],
+  "label.boards": [
+    {
+      "type": 0,
+      "value": "Boards"
+    }
+  ],
   "label.bounce-rate": [
     {
       "type": 0,
@@ -110,7 +140,7 @@
   "label.breakdown": [
     {
       "type": 0,
-      "value": "Breakdown"
+      "value": "Aufschlüsselung"
     }
   ],
   "label.browser": [
@@ -125,6 +155,12 @@
       "value": "Browser"
     }
   ],
+  "label.campaigns": [
+    {
+      "type": 0,
+      "value": "Kampagnen"
+    }
+  ],
   "label.cancel": [
     {
       "type": 0,
@@ -135,6 +171,12 @@
     {
       "type": 0,
       "value": "Passwort ändern"
+    }
+  ],
+  "label.channels": [
+    {
+      "type": 0,
+      "value": "Kanäle"
     }
   ],
   "label.cities": [
@@ -155,6 +197,24 @@
       "value": "Alles löschen"
     }
   ],
+  "label.cohort": [
+    {
+      "type": 0,
+      "value": "Gruppe"
+    }
+  ],
+  "label.compare": [
+    {
+      "type": 0,
+      "value": "Vergleichen"
+    }
+  ],
+  "label.compare-dates": [
+    {
+      "type": 0,
+      "value": "Daten vergleichen"
+    }
+  ],
   "label.confirm": [
     {
       "type": 0,
@@ -173,10 +233,40 @@
       "value": "Enthält"
     }
   ],
+  "label.content": [
+    {
+      "type": 0,
+      "value": "Inhalt"
+    }
+  ],
   "label.continue": [
     {
       "type": 0,
       "value": "Weiter"
+    }
+  ],
+  "label.conversion": [
+    {
+      "type": 0,
+      "value": "Konversion"
+    }
+  ],
+  "label.conversion-rate": [
+    {
+      "type": 0,
+      "value": "Konversionsrate"
+    }
+  ],
+  "label.conversion-step": [
+    {
+      "type": 0,
+      "value": "Konversionsschritt"
+    }
+  ],
+  "label.count": [
+    {
+      "type": 0,
+      "value": "Anzahl"
     }
   ],
   "label.countries": [
@@ -194,7 +284,7 @@
   "label.create": [
     {
       "type": 0,
-      "value": "Create"
+      "value": "Erstellen"
     }
   ],
   "label.create-report": [
@@ -224,7 +314,19 @@
   "label.created-by": [
     {
       "type": 0,
-      "value": "Created By"
+      "value": "Erstellt von"
+    }
+  ],
+  "label.currency": [
+    {
+      "type": 0,
+      "value": "Währung"
+    }
+  ],
+  "label.current": [
+    {
+      "type": 0,
+      "value": "Aktuell"
     }
   ],
   "label.current-password": [
@@ -284,7 +386,7 @@
   "label.delete-report": [
     {
       "type": 0,
-      "value": "Delete report"
+      "value": "Bericht löschen"
     }
   ],
   "label.delete-team": [
@@ -335,16 +437,40 @@
       "value": "Geräte"
     }
   ],
+  "label.direct": [
+    {
+      "type": 0,
+      "value": "Direkt"
+    }
+  ],
   "label.dismiss": [
     {
       "type": 0,
       "value": "Verwerfen"
     }
   ],
+  "label.distinct-id": [
+    {
+      "type": 0,
+      "value": "Eindeutige ID"
+    }
+  ],
   "label.does-not-contain": [
     {
       "type": 0,
       "value": "Enthält nicht"
+    }
+  ],
+  "label.does-not-include": [
+    {
+      "type": 0,
+      "value": "Nicht enthalten"
+    }
+  ],
+  "label.doest-not-exist": [
+    {
+      "type": 0,
+      "value": "Existiert nicht"
     }
   ],
   "label.domain": [
@@ -356,7 +482,7 @@
   "label.dropoff": [
     {
       "type": 0,
-      "value": "Dropoff"
+      "value": "Absprung"
     }
   ],
   "label.edit": [
@@ -374,7 +500,13 @@
   "label.edit-member": [
     {
       "type": 0,
-      "value": "Edit member"
+      "value": "Mitglied bearbeiten"
+    }
+  ],
+  "label.email": [
+    {
+      "type": 0,
+      "value": "Email"
     }
   ],
   "label.enable-share-url": [
@@ -383,22 +515,52 @@
       "value": "Freigabe-URL aktivieren"
     }
   ],
+  "label.end-step": [
+    {
+      "type": 0,
+      "value": "Schlussschritt"
+    }
+  ],
+  "label.entry": [
+    {
+      "type": 0,
+      "value": "Eingangs-URL"
+    }
+  ],
   "label.event": [
     {
       "type": 0,
-      "value": "Event"
+      "value": "Ereignis"
     }
   ],
   "label.event-data": [
     {
       "type": 0,
-      "value": "Eventdaten"
+      "value": "Ereignisdaten"
+    }
+  ],
+  "label.event-name": [
+    {
+      "type": 0,
+      "value": "Ereignisname"
     }
   ],
   "label.events": [
     {
       "type": 0,
       "value": "Ereignisse"
+    }
+  ],
+  "label.exists": [
+    {
+      "type": 0,
+      "value": "Existiert"
+    }
+  ],
+  "label.exit": [
+    {
+      "type": 0,
+      "value": "Ausgangs-URL"
     }
   ],
   "label.false": [
@@ -443,16 +605,52 @@
       "value": "Filter"
     }
   ],
+  "label.first-click": [
+    {
+      "type": 0,
+      "value": "Erster Klick"
+    }
+  ],
+  "label.first-seen": [
+    {
+      "type": 0,
+      "value": "Erstmalig gesehen"
+    }
+  ],
   "label.funnel": [
     {
       "type": 0,
-      "value": "Funnel"
+      "value": "Trichter"
     }
   ],
   "label.funnel-description": [
     {
       "type": 0,
-      "value": "Understand the conversion and drop-off rate of users."
+      "value": "Verstehen Sie die Konversions- und Absprungrate Ihrer Nutzer."
+    }
+  ],
+  "label.funnels": [
+    {
+      "type": 0,
+      "value": "Funnels"
+    }
+  ],
+  "label.goal": [
+    {
+      "type": 0,
+      "value": "Ziel"
+    }
+  ],
+  "label.goals": [
+    {
+      "type": 0,
+      "value": "Ziele"
+    }
+  ],
+  "label.goals-description": [
+    {
+      "type": 0,
+      "value": "Verfolgen Sie Ihre Ziele für Seitenaufrufe und Ereignisse."
     }
   ],
   "label.greater-than": [
@@ -467,22 +665,52 @@
       "value": "Größer oder gleich"
     }
   ],
+  "label.grouped": [
+    {
+      "type": 0,
+      "value": "Gruppiert"
+    }
+  ],
+  "label.hostname": [
+    {
+      "type": 0,
+      "value": "Hostname"
+    }
+  ],
+  "label.includes": [
+    {
+      "type": 0,
+      "value": "Enthält"
+    }
+  ],
+  "label.insight": [
+    {
+      "type": 0,
+      "value": "Einblick"
+    }
+  ],
   "label.insights": [
     {
       "type": 0,
-      "value": "Insights"
+      "value": "Einblicke"
     }
   ],
   "label.insights-description": [
     {
       "type": 0,
-      "value": "Dive deeper into your data by using segments and filters."
+      "value": "Vertiefen Sie sich mit Hilfe von Segmenten und Filtern in Ihre Daten."
     }
   ],
   "label.is": [
     {
       "type": 0,
       "value": "Ist"
+    }
+  ],
+  "label.is-false": [
+    {
+      "type": 0,
+      "value": "Ist falsch"
     }
   ],
   "label.is-not": [
@@ -503,6 +731,12 @@
       "value": "Ist gesetzt"
     }
   ],
+  "label.is-true": [
+    {
+      "type": 0,
+      "value": "Ist wahr"
+    }
+  ],
   "label.join": [
     {
       "type": 0,
@@ -513,6 +747,24 @@
     {
       "type": 0,
       "value": "Team beitreten"
+    }
+  ],
+  "label.journey": [
+    {
+      "type": 0,
+      "value": "Reise"
+    }
+  ],
+  "label.journey-description": [
+    {
+      "type": 0,
+      "value": "Verstehen Sie, wie Nutzer auf Ihrer Website navigieren."
+    }
+  ],
+  "label.journeys": [
+    {
+      "type": 0,
+      "value": "Reisen"
     }
   ],
   "label.language": [
@@ -533,10 +785,16 @@
       "value": "Laptop"
     }
   ],
+  "label.last-click": [
+    {
+      "type": 0,
+      "value": "Letzter Klick"
+    }
+  ],
   "label.last-days": [
     {
       "type": 0,
-      "value": "Letzte "
+      "value": "Letzten "
     },
     {
       "type": 1,
@@ -550,7 +808,7 @@
   "label.last-hours": [
     {
       "type": 0,
-      "value": "Letzte "
+      "value": "Letzten "
     },
     {
       "type": 1,
@@ -564,7 +822,7 @@
   "label.last-months": [
     {
       "type": 0,
-      "value": "Last "
+      "value": "Letzten "
     },
     {
       "type": 1,
@@ -572,7 +830,13 @@
     },
     {
       "type": 0,
-      "value": " months"
+      "value": " Monate"
+    }
+  ],
+  "label.last-seen": [
+    {
+      "type": 0,
+      "value": "Zuletzt gesehen"
     }
   ],
   "label.leave": [
@@ -599,6 +863,12 @@
       "value": "Kleiner oder gleich"
     }
   ],
+  "label.links": [
+    {
+      "type": 0,
+      "value": "Links"
+    }
+  ],
   "label.login": [
     {
       "type": 0,
@@ -614,7 +884,13 @@
   "label.manage": [
     {
       "type": 0,
-      "value": "Manage"
+      "value": "Verwalten"
+    }
+  ],
+  "label.manager": [
+    {
+      "type": 0,
+      "value": "Verwaltung"
     }
   ],
   "label.max": [
@@ -623,10 +899,22 @@
       "value": "Max"
     }
   ],
+  "label.maximize": [
+    {
+      "type": 0,
+      "value": "Erweitern"
+    }
+  ],
+  "label.medium": [
+    {
+      "type": 0,
+      "value": "Medium"
+    }
+  ],
   "label.member": [
     {
       "type": 0,
-      "value": "Member"
+      "value": "Mitglied"
     }
   ],
   "label.members": [
@@ -647,6 +935,12 @@
       "value": "Handy"
     }
   ],
+  "label.model": [
+    {
+      "type": 0,
+      "value": "Model"
+    }
+  ],
   "label.more": [
     {
       "type": 0,
@@ -656,7 +950,7 @@
   "label.my-account": [
     {
       "type": 0,
-      "value": "My account"
+      "value": "Mein Account"
     }
   ],
   "label.my-websites": [
@@ -723,10 +1017,46 @@
       "value": "OK"
     }
   ],
+  "label.online": [
+    {
+      "type": 0,
+      "value": "Online"
+    }
+  ],
+  "label.organic-search": [
+    {
+      "type": 0,
+      "value": "Organische Suche"
+    }
+  ],
+  "label.organic-shopping": [
+    {
+      "type": 0,
+      "value": "Organisches Shopping"
+    }
+  ],
+  "label.organic-social": [
+    {
+      "type": 0,
+      "value": "Organisches Social Media"
+    }
+  ],
+  "label.organic-video": [
+    {
+      "type": 0,
+      "value": "Organisches Video"
+    }
+  ],
   "label.os": [
     {
       "type": 0,
       "value": "OS"
+    }
+  ],
+  "label.other": [
+    {
+      "type": 0,
+      "value": "Andere"
     }
   ],
   "label.overview": [
@@ -739,6 +1069,12 @@
     {
       "type": 0,
       "value": "Besitzer"
+    }
+  ],
+  "label.page": [
+    {
+      "type": 0,
+      "value": "Seite"
     }
   ],
   "label.page-of": [
@@ -777,10 +1113,58 @@
       "value": "Seiten"
     }
   ],
+  "label.paid-ads": [
+    {
+      "type": 0,
+      "value": "Bezahlte Anzeigen"
+    }
+  ],
+  "label.paid-search": [
+    {
+      "type": 0,
+      "value": "Bezahlte Suche"
+    }
+  ],
+  "label.paid-shopping": [
+    {
+      "type": 0,
+      "value": "Bezahltes Shopping"
+    }
+  ],
+  "label.paid-social": [
+    {
+      "type": 0,
+      "value": "Bezahltes Social Media"
+    }
+  ],
+  "label.paid-video": [
+    {
+      "type": 0,
+      "value": "Bezahltes Video"
+    }
+  ],
   "label.password": [
     {
       "type": 0,
       "value": "Passwort"
+    }
+  ],
+  "label.path": [
+    {
+      "type": 0,
+      "value": "Pfad"
+    }
+  ],
+  "label.paths": [
+    {
+      "type": 0,
+      "value": "Pfade"
+    }
+  ],
+  "label.pixels": [
+    {
+      "type": 0,
+      "value": "Pixel"
     }
   ],
   "label.powered-by": [
@@ -793,10 +1177,40 @@
       "value": "name"
     }
   ],
+  "label.previous": [
+    {
+      "type": 0,
+      "value": "Vorherig"
+    }
+  ],
+  "label.previous-period": [
+    {
+      "type": 0,
+      "value": "Vorherige Periode"
+    }
+  ],
+  "label.previous-year": [
+    {
+      "type": 0,
+      "value": "Vorheriges Jahr"
+    }
+  ],
   "label.profile": [
     {
       "type": 0,
       "value": "Profil"
+    }
+  ],
+  "label.properties": [
+    {
+      "type": 0,
+      "value": "Eigenschaften"
+    }
+  ],
+  "label.property": [
+    {
+      "type": 0,
+      "value": "Eigenschaft"
     }
   ],
   "label.queries": [
@@ -823,16 +1237,22 @@
       "value": "Echtzeit"
     }
   ],
+  "label.referral": [
+    {
+      "type": 0,
+      "value": "Empfehlung"
+    }
+  ],
   "label.referrer": [
     {
       "type": 0,
-      "value": "Referrer"
+      "value": "Übermittler"
     }
   ],
   "label.referrers": [
     {
       "type": 0,
-      "value": "Referrer"
+      "value": "Übermittler"
     }
   ],
   "label.refresh": [
@@ -859,6 +1279,12 @@
       "value": "Regionen"
     }
   ],
+  "label.remaining": [
+    {
+      "type": 0,
+      "value": "Verbleibend"
+    }
+  ],
   "label.remove": [
     {
       "type": 0,
@@ -868,7 +1294,7 @@
   "label.remove-member": [
     {
       "type": 0,
-      "value": "Remove member"
+      "value": "Mitglied entfernen"
     }
   ],
   "label.reports": [
@@ -898,13 +1324,25 @@
   "label.retention": [
     {
       "type": 0,
-      "value": "Retention"
+      "value": "Erhalt"
     }
   ],
   "label.retention-description": [
     {
       "type": 0,
-      "value": "Measure your website stickiness by tracking how often users return."
+      "value": "Messen Sie die Verweildauer auf Ihrer Website, indem Sie verfolgen, wie oft die Nutzer zurückkehren."
+    }
+  ],
+  "label.revenue": [
+    {
+      "type": 0,
+      "value": "Umsatz"
+    }
+  ],
+  "label.revenue-description": [
+    {
+      "type": 0,
+      "value": "Haben Sie einen Blick auf Ihre Umsätze im Laufe der Zeit."
     }
   ],
   "label.role": [
@@ -934,13 +1372,13 @@
   "label.search": [
     {
       "type": 0,
-      "value": "Search"
+      "value": "Suche"
     }
   ],
   "label.select": [
     {
       "type": 0,
-      "value": "Select"
+      "value": "Auswählen"
     }
   ],
   "label.select-date": [
@@ -949,16 +1387,34 @@
       "value": "Datum auswählen"
     }
   ],
+  "label.select-filter": [
+    {
+      "type": 0,
+      "value": "Filter auswählen"
+    }
+  ],
   "label.select-role": [
     {
       "type": 0,
-      "value": "Select role"
+      "value": "Rolle auswählen"
     }
   ],
   "label.select-website": [
     {
       "type": 0,
       "value": "Website auswählen"
+    }
+  ],
+  "label.session": [
+    {
+      "type": 0,
+      "value": "Sitzung"
+    }
+  ],
+  "label.session-data": [
+    {
+      "type": 0,
+      "value": "Sitzungsdaten"
     }
   ],
   "label.sessions": [
@@ -973,6 +1429,12 @@
       "value": "Einstellungen"
     }
   ],
+  "label.share": [
+    {
+      "type": 0,
+      "value": "Teilen"
+    }
+  ],
   "label.share-url": [
     {
       "type": 0,
@@ -985,10 +1447,28 @@
       "value": "Ein Tag"
     }
   ],
+  "label.sms": [
+    {
+      "type": 0,
+      "value": "SMS"
+    }
+  ],
+  "label.sources": [
+    {
+      "type": 0,
+      "value": "Quellen"
+    }
+  ],
+  "label.start-step": [
+    {
+      "type": 0,
+      "value": "Startschritt"
+    }
+  ],
   "label.steps": [
     {
       "type": 0,
-      "value": "Steps"
+      "value": "Schritte"
     }
   ],
   "label.sum": [
@@ -1003,6 +1483,18 @@
       "value": "Tablet"
     }
   ],
+  "label.tag": [
+    {
+      "type": 0,
+      "value": "Tag"
+    }
+  ],
+  "label.tags": [
+    {
+      "type": 0,
+      "value": "Stichworte"
+    }
+  ],
   "label.team": [
     {
       "type": 0,
@@ -1013,6 +1505,12 @@
     {
       "type": 0,
       "value": "Team-ID"
+    }
+  ],
+  "label.team-manager": [
+    {
+      "type": 0,
+      "value": "Team-Manager"
     }
   ],
   "label.team-member": [
@@ -1033,10 +1531,16 @@
       "value": "Team-Eigentümer"
     }
   ],
+  "label.team-settings": [
+    {
+      "type": 0,
+      "value": "Team-Einstellungen"
+    }
+  ],
   "label.team-view-only": [
     {
       "type": 0,
-      "value": "Team view only"
+      "value": "Nur für Team-Mitglieder sichtbar"
     }
   ],
   "label.team-websites": [
@@ -1049,6 +1553,12 @@
     {
       "type": 0,
       "value": "Teams"
+    }
+  ],
+  "label.terms": [
+    {
+      "type": 0,
+      "value": "Bedingungen"
     }
   ],
   "label.theme": [
@@ -1117,16 +1627,22 @@
       "value": "Tracking Code"
     }
   ],
+  "label.transactions": [
+    {
+      "type": 0,
+      "value": "Transaktionen"
+    }
+  ],
   "label.transfer": [
     {
       "type": 0,
-      "value": "Transfer"
+      "value": "Übertragung"
     }
   ],
   "label.transfer-website": [
     {
       "type": 0,
-      "value": "Transfer website"
+      "value": "Website übertragen"
     }
   ],
   "label.true": [
@@ -1144,13 +1660,19 @@
   "label.unique": [
     {
       "type": 0,
-      "value": "Eindeutig"
+      "value": "Einzigartig"
     }
   ],
   "label.unique-visitors": [
     {
       "type": 0,
-      "value": "Eindeutige Besucher"
+      "value": "Einzigartige Besucher"
+    }
+  ],
+  "label.uniqueCustomers": [
+    {
+      "type": 0,
+      "value": "Einzigartige Kunden"
     }
   ],
   "label.unknown": [
@@ -1169,18 +1691,6 @@
     {
       "type": 0,
       "value": "Update"
-    }
-  ],
-  "label.url": [
-    {
-      "type": 0,
-      "value": "URL"
-    }
-  ],
-  "label.urls": [
-    {
-      "type": 0,
-      "value": "URLs"
     }
   ],
   "label.user": [
@@ -1210,7 +1720,7 @@
   "label.utm-description": [
     {
       "type": 0,
-      "value": "Track your campaigns through UTM parameters."
+      "value": "Tracken Sie Ihre Kampagnen mit UTM Parametern."
     }
   ],
   "label.value": [
@@ -1246,7 +1756,13 @@
   "label.views-per-visit": [
     {
       "type": 0,
-      "value": "Views per visit"
+      "value": "Aufrufe pro Besuch"
+    }
+  ],
+  "label.visit-duration": [
+    {
+      "type": 0,
+      "value": "Durchschn. Besuchszeit"
     }
   ],
   "label.visitors": [
@@ -1258,7 +1774,7 @@
   "label.visits": [
     {
       "type": 0,
-      "value": "Visits"
+      "value": "Besuche"
     }
   ],
   "label.website": [
@@ -1270,7 +1786,7 @@
   "label.website-id": [
     {
       "type": 0,
-      "value": "Website ID"
+      "value": "Website-ID"
     }
   ],
   "label.websites": [
@@ -1294,7 +1810,7 @@
   "message.action-confirmation": [
     {
       "type": 0,
-      "value": "Type "
+      "value": "Schreibe "
     },
     {
       "type": 1,
@@ -1302,7 +1818,7 @@
     },
     {
       "type": 0,
-      "value": " in the box below to confirm."
+      "value": " in die Box zur bestätigung."
     }
   ],
   "message.active-users": [
@@ -1339,6 +1855,18 @@
       "value": "x"
     }
   ],
+  "message.bad-request": [
+    {
+      "type": 0,
+      "value": "Bad request"
+    }
+  ],
+  "message.collected-data": [
+    {
+      "type": 0,
+      "value": "Gesammelte Daten"
+    }
+  ],
   "message.confirm-delete": [
     {
       "type": 0,
@@ -1370,7 +1898,7 @@
   "message.confirm-remove": [
     {
       "type": 0,
-      "value": "Are you sure you want to remove "
+      "value": "Sind Sie sicher, "
     },
     {
       "type": 1,
@@ -1378,7 +1906,7 @@
     },
     {
       "type": 0,
-      "value": "?"
+      "value": " zu entfernen?"
     }
   ],
   "message.confirm-reset": [
@@ -1398,7 +1926,7 @@
   "message.delete-team-warning": [
     {
       "type": 0,
-      "value": "Deleting a team will also delete all team websites."
+      "value": "Ein Team zu löschen, wird auch alle Team-Websites löschen."
     }
   ],
   "message.delete-website-warning": [
@@ -1425,6 +1953,12 @@
     {
       "type": 1,
       "value": "url"
+    }
+  ],
+  "message.forbidden": [
+    {
+      "type": 0,
+      "value": "Forbidden"
     }
   ],
   "message.go-to-settings": [
@@ -1517,6 +2051,18 @@
       "value": "Es ist keine Website vorhanden."
     }
   ],
+  "message.not-found": [
+    {
+      "type": 0,
+      "value": "Not found"
+    }
+  ],
+  "message.nothing-selected": [
+    {
+      "type": 0,
+      "value": "Nothing selected."
+    }
+  ],
   "message.page-not-found": [
     {
       "type": 0,
@@ -1547,6 +2093,12 @@
     {
       "type": 0,
       "value": "Erfolgreich gespeichert."
+    }
+  ],
+  "message.sever-error": [
+    {
+      "type": 0,
+      "value": "Server error"
     }
   ],
   "message.share-url": [
@@ -1582,25 +2134,31 @@
   "message.transfer-team-website-to-user": [
     {
       "type": 0,
-      "value": "Transfer this website to your account?"
+      "value": "Diese Website zu Ihrem Account transferieren?"
     }
   ],
   "message.transfer-user-website-to-team": [
     {
       "type": 0,
-      "value": "Select the team to transfer this website to."
+      "value": "Wählen Sie ein Team aus, zu dem die Website transferiert werden soll."
     }
   ],
   "message.transfer-website": [
     {
       "type": 0,
-      "value": "Transfer website ownership to your account or another team."
+      "value": "Übertragen Sie die Eigentümerrechte zu Ihrem Account oder einem anderen Team."
     }
   ],
   "message.triggered-event": [
     {
       "type": 0,
-      "value": "Triggered event"
+      "value": "Ereignis ausgelöst"
+    }
+  ],
+  "message.unauthorized": [
+    {
+      "type": 0,
+      "value": "Unauthorized"
     }
   ],
   "message.user-deleted": [
@@ -1612,7 +2170,7 @@
   "message.viewed-page": [
     {
       "type": 0,
-      "value": "Viewed page"
+      "value": "Seite besucht"
     }
   ],
   "message.visitor-log": [
@@ -1647,12 +2205,6 @@
     {
       "type": 1,
       "value": "device"
-    }
-  ],
-  "message.visitors-dropped-off": [
-    {
-      "type": 0,
-      "value": "Visitors dropped off"
     }
   ]
 }

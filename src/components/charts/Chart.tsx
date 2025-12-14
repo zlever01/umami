@@ -1,40 +1,35 @@
-import { useState, useRef, useEffect, useMemo, ReactNode } from 'react';
-import { Loading } from 'react-basics';
-import classNames from 'classnames';
-import ChartJS, { LegendItem } from 'chart.js/auto';
-import HoverTooltip from 'components/common/HoverTooltip';
-import Legend from 'components/metrics/Legend';
-import { DEFAULT_ANIMATION_DURATION } from 'lib/constants';
-import styles from './Chart.module.css';
+import { Box, type BoxProps, Column } from '@umami/react-zen';
+import ChartJS, {
+  type ChartData,
+  type ChartOptions,
+  type LegendItem,
+  type UpdateMode,
+} from 'chart.js/auto';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { Legend } from '@/components/metrics/Legend';
+import { DEFAULT_ANIMATION_DURATION } from '@/lib/constants';
 
-export interface ChartProps {
+ChartJS.defaults.font.family = 'Inter';
+
+export interface ChartProps extends BoxProps {
   type?: 'bar' | 'bubble' | 'doughnut' | 'pie' | 'line' | 'polarArea' | 'radar' | 'scatter';
-  data?: object;
-  isLoading?: boolean;
+  chartData?: ChartData & { focusLabel?: string };
+  chartOptions?: ChartOptions;
+  updateMode?: UpdateMode;
   animationDuration?: number;
-  updateMode?: string;
-  onCreate?: (chart: any) => void;
-  onUpdate?: (chart: any) => void;
   onTooltip?: (model: any) => void;
-  className?: string;
-  chartOptions?: { [key: string]: any };
-  tooltip?: ReactNode;
 }
 
 export function Chart({
   type,
-  data,
-  isLoading = false,
+  chartData,
   animationDuration = DEFAULT_ANIMATION_DURATION,
-  tooltip,
   updateMode,
-  onCreate,
-  onUpdate,
   onTooltip,
-  className,
   chartOptions,
+  ...props
 }: ChartProps) {
-  const canvas = useRef();
+  const canvas = useRef(null);
   const chart = useRef(null);
   const [legendItems, setLegendItems] = useState([]);
 
@@ -57,57 +52,13 @@ export function Chart({
         },
         tooltip: {
           enabled: false,
+          intersect: true,
           external: onTooltip,
         },
       },
       ...chartOptions,
     };
   }, [chartOptions]);
-
-  const createChart = (data: any) => {
-    ChartJS.defaults.font.family = 'Inter';
-
-    chart.current = new ChartJS(canvas.current, {
-      type,
-      data,
-      options,
-    });
-
-    onCreate?.(chart.current);
-
-    setLegendItems(chart.current.legend.legendItems);
-  };
-
-  const updateChart = (data: any) => {
-    chart.current.data.datasets.forEach((dataset: { data: any }, index: string | number) => {
-      if (data?.datasets[index]) {
-        dataset.data = data?.datasets[index]?.data;
-
-        if (chart.current.legend.legendItems[index]) {
-          chart.current.legend.legendItems[index].text = data?.datasets[index]?.label;
-        }
-      }
-    });
-
-    chart.current.options = options;
-
-    // Allow config changes before update
-    onUpdate?.(chart.current);
-
-    setLegendItems(chart.current.legend.legendItems);
-
-    chart.current.update(updateMode);
-  };
-
-  useEffect(() => {
-    if (data) {
-      if (!chart.current) {
-        createChart(data);
-      } else {
-        updateChart(data);
-      }
-    }
-  }, [data, options]);
 
   const handleLegendClick = (item: LegendItem) => {
     if (type === 'bar') {
@@ -130,20 +81,50 @@ export function Chart({
     setLegendItems(chart.current.legend.legendItems);
   };
 
+  // Create chart
+  useEffect(() => {
+    if (canvas.current) {
+      chart.current = new ChartJS(canvas.current, {
+        type,
+        data: chartData,
+        options,
+      });
+
+      setLegendItems(chart.current.legend.legendItems);
+    }
+
+    return () => {
+      chart.current?.destroy();
+    };
+  }, []);
+
+  // Update chart
+  useEffect(() => {
+    if (chart.current && chartData) {
+      // Replace labels and datasets *in-place*
+      chart.current.data.labels = chartData.labels;
+      chart.current.data.datasets = chartData.datasets;
+
+      if (chartData.focusLabel !== null) {
+        chart.current.data.datasets.forEach((ds: { hidden: boolean; label: any }) => {
+          ds.hidden = chartData.focusLabel ? ds.label !== chartData.focusLabel : false;
+        });
+      }
+
+      chart.current.options = options;
+
+      chart.current.update(updateMode);
+
+      setLegendItems(chart.current.legend.legendItems);
+    }
+  }, [chartData, options, updateMode]);
+
   return (
-    <>
-      <div className={classNames(styles.chart, className)}>
-        {isLoading && <Loading position="page" icon="dots" />}
+    <Column gap="6">
+      <Box {...props}>
         <canvas ref={canvas} />
-      </div>
+      </Box>
       <Legend items={legendItems} onClick={handleLegendClick} />
-      {tooltip && (
-        <HoverTooltip>
-          <div className={styles.tooltip}>{tooltip}</div>
-        </HoverTooltip>
-      )}
-    </>
+    </Column>
   );
 }
-
-export default Chart;

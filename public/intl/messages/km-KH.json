@@ -2,7 +2,7 @@
   "label.access-code": [
     {
       "type": 0,
-      "value": "Access code"
+      "value": "កូដចូលប្រើ"
     }
   ],
   "label.actions": [
@@ -11,34 +11,40 @@
       "value": "សកម្មភាព"
     }
   ],
-  "label.activity-log": [
+  "label.activity": [
     {
       "type": 0,
-      "value": "Activity log"
+      "value": "កំណត់ហេតុ​សកម្មភាព"
     }
   ],
   "label.add": [
     {
       "type": 0,
-      "value": "Add"
+      "value": "បង្កើតបន្ថែម"
+    }
+  ],
+  "label.add-board": [
+    {
+      "type": 0,
+      "value": "បន្ថែមក្តារ"
     }
   ],
   "label.add-description": [
     {
       "type": 0,
-      "value": "Add description"
+      "value": "បន្ថែមពិពណ៌នា"
     }
   ],
   "label.add-member": [
     {
       "type": 0,
-      "value": "Add member"
+      "value": "បន្ថែមសមាជិក"
     }
   ],
   "label.add-step": [
     {
       "type": 0,
-      "value": "Add step"
+      "value": "បន្ថែមជំហាន"
     }
   ],
   "label.add-website": [
@@ -53,10 +59,16 @@
       "value": "អ្នកគ្រប់គ្រង"
     }
   ],
+  "label.affiliate": [
+    {
+      "type": 0,
+      "value": "ដៃគូ"
+    }
+  ],
   "label.after": [
     {
       "type": 0,
-      "value": "After"
+      "value": "បន្ទាប់"
     }
   ],
   "label.all": [
@@ -74,19 +86,31 @@
   "label.analytics": [
     {
       "type": 0,
-      "value": "Analytics"
+      "value": "វិភាគ"
+    }
+  ],
+  "label.apply": [
+    {
+      "type": 0,
+      "value": "អនុវត្ត"
+    }
+  ],
+  "label.attribution": [
+    {
+      "type": 0,
+      "value": "ការបញ្ជាក់"
+    }
+  ],
+  "label.attribution-description": [
+    {
+      "type": 0,
+      "value": "មើលថាប្រើប្រាស់របស់អ្នកធ្វើអ្វីជាមួយទីផ្សាររបស់អ្នក និងអ្វីជាហេតុបណ្តាលឲ្យមានការបម្លែង។"
     }
   ],
   "label.average": [
     {
       "type": 0,
-      "value": "Average"
-    }
-  ],
-  "label.average-visit-time": [
-    {
-      "type": 0,
-      "value": "មើលជាមធ្យម"
+      "value": "ជាមធ្យម"
     }
   ],
   "label.back": [
@@ -98,7 +122,13 @@
   "label.before": [
     {
       "type": 0,
-      "value": "Before"
+      "value": "មុន"
+    }
+  ],
+  "label.boards": [
+    {
+      "type": 0,
+      "value": "ក្តារ"
     }
   ],
   "label.bounce-rate": [
@@ -110,19 +140,25 @@
   "label.breakdown": [
     {
       "type": 0,
-      "value": "Breakdown"
+      "value": "បំបែកលម្អិត"
     }
   ],
   "label.browser": [
     {
       "type": 0,
-      "value": "Browser"
+      "value": "កម្មវិធីរុករក"
     }
   ],
   "label.browsers": [
     {
       "type": 0,
       "value": "កម្មវិធី"
+    }
+  ],
+  "label.campaigns": [
+    {
+      "type": 0,
+      "value": "យុទ្ធនាការ"
     }
   ],
   "label.cancel": [
@@ -137,28 +173,52 @@
       "value": "ផ្លាស់ប្តូរពាក្យសម្ងាត់"
     }
   ],
+  "label.channels": [
+    {
+      "type": 0,
+      "value": "ឆានែល"
+    }
+  ],
   "label.cities": [
     {
       "type": 0,
-      "value": "Cities"
+      "value": "ទីក្រុង"
     }
   ],
   "label.city": [
     {
       "type": 0,
-      "value": "City"
+      "value": "ទីក្រុង"
     }
   ],
   "label.clear-all": [
     {
       "type": 0,
-      "value": "Clear all"
+      "value": "លុបចេញទាំងអស់"
+    }
+  ],
+  "label.cohort": [
+    {
+      "type": 0,
+      "value": "ក្រុម"
+    }
+  ],
+  "label.compare": [
+    {
+      "type": 0,
+      "value": "ប្រៀបធៀប"
+    }
+  ],
+  "label.compare-dates": [
+    {
+      "type": 0,
+      "value": "ប្រៀបធៀបទិន្នន័យថ្ងៃខែ"
     }
   ],
   "label.confirm": [
     {
       "type": 0,
-      "value": "Confirm"
+      "value": "បញ្ជាក់"
     }
   ],
   "label.confirm-password": [
@@ -170,13 +230,43 @@
   "label.contains": [
     {
       "type": 0,
-      "value": "Contains"
+      "value": "មាន"
+    }
+  ],
+  "label.content": [
+    {
+      "type": 0,
+      "value": "មាតិកា"
     }
   ],
   "label.continue": [
     {
       "type": 0,
-      "value": "Continue"
+      "value": "បន្ត"
+    }
+  ],
+  "label.conversion": [
+    {
+      "type": 0,
+      "value": "ការបម្លែង"
+    }
+  ],
+  "label.conversion-rate": [
+    {
+      "type": 0,
+      "value": "អត្រាបម្លែង"
+    }
+  ],
+  "label.conversion-step": [
+    {
+      "type": 0,
+      "value": "ជំហានបម្លែង"
+    }
+  ],
+  "label.count": [
+    {
+      "type": 0,
+      "value": "ចំនួន"
     }
   ],
   "label.countries": [
@@ -188,43 +278,55 @@
   "label.country": [
     {
       "type": 0,
-      "value": "Country"
+      "value": "ប្រទេស"
     }
   ],
   "label.create": [
     {
       "type": 0,
-      "value": "Create"
+      "value": "បង្កើត"
     }
   ],
   "label.create-report": [
     {
       "type": 0,
-      "value": "Create report"
+      "value": "បង្កើតរបាយការណ៍"
     }
   ],
   "label.create-team": [
     {
       "type": 0,
-      "value": "Create team"
+      "value": "បង្កើតក្រុម"
     }
   ],
   "label.create-user": [
     {
       "type": 0,
-      "value": "Create user"
+      "value": "បង្កើតអ្នកប្រើប្រាស់"
     }
   ],
   "label.created": [
     {
       "type": 0,
-      "value": "Created"
+      "value": "បង្កើតនៅ"
     }
   ],
   "label.created-by": [
     {
       "type": 0,
-      "value": "Created By"
+      "value": "បង្កើតដោយ"
+    }
+  ],
+  "label.currency": [
+    {
+      "type": 0,
+      "value": "រូបិយប័ណ្ណ"
+    }
+  ],
+  "label.current": [
+    {
+      "type": 0,
+      "value": "បច្ចុប្បន្ន"
     }
   ],
   "label.current-password": [
@@ -248,13 +350,13 @@
   "label.data": [
     {
       "type": 0,
-      "value": "Data"
+      "value": "ទិន្នន័យ"
     }
   ],
   "label.date": [
     {
       "type": 0,
-      "value": "Date"
+      "value": "កាលបរិច្ឆេទ"
     }
   ],
   "label.date-range": [
@@ -266,13 +368,13 @@
   "label.day": [
     {
       "type": 0,
-      "value": "Day"
+      "value": "ថ្ងៃ"
     }
   ],
   "label.default-date-range": [
     {
       "type": 0,
-      "value": "ចន្លោះកាលបរិច្ឆេទស្រាប់"
+      "value": "ចន្លោះកាលបរិច្ឆេទដើម"
     }
   ],
   "label.delete": [
@@ -284,19 +386,19 @@
   "label.delete-report": [
     {
       "type": 0,
-      "value": "Delete report"
+      "value": "លុបរបាយការណ៍"
     }
   ],
   "label.delete-team": [
     {
       "type": 0,
-      "value": "Delete team"
+      "value": "លុបក្រុម"
     }
   ],
   "label.delete-user": [
     {
       "type": 0,
-      "value": "Delete user"
+      "value": "លុបអ្នកប្រើប្រាស់"
     }
   ],
   "label.delete-website": [
@@ -308,7 +410,7 @@
   "label.description": [
     {
       "type": 0,
-      "value": "Description"
+      "value": "ការពិពណ៌នា"
     }
   ],
   "label.desktop": [
@@ -320,13 +422,13 @@
   "label.details": [
     {
       "type": 0,
-      "value": "Details"
+      "value": "ព័ត៌មានលម្អិត"
     }
   ],
   "label.device": [
     {
       "type": 0,
-      "value": "Device"
+      "value": "ឧបករណ៍"
     }
   ],
   "label.devices": [
@@ -335,22 +437,46 @@
       "value": "ឧបករណ៍"
     }
   ],
+  "label.direct": [
+    {
+      "type": 0,
+      "value": "ផ្ទាល់"
+    }
+  ],
   "label.dismiss": [
     {
       "type": 0,
-      "value": "បដិសេធ"
+      "value": "រំសាយ"
+    }
+  ],
+  "label.distinct-id": [
+    {
+      "type": 0,
+      "value": "លេខសម្គាល់ពិសេស"
     }
   ],
   "label.does-not-contain": [
     {
       "type": 0,
-      "value": "Does not contain"
+      "value": "មិនមាន"
+    }
+  ],
+  "label.does-not-include": [
+    {
+      "type": 0,
+      "value": "មិនរួមបញ្ចូល"
+    }
+  ],
+  "label.doest-not-exist": [
+    {
+      "type": 0,
+      "value": "មិនមានទេ"
     }
   ],
   "label.domain": [
     {
       "type": 0,
-      "value": "ឈ្មោះគេហទំព័រ"
+      "value": "Domain"
     }
   ],
   "label.dropoff": [
@@ -374,7 +500,13 @@
   "label.edit-member": [
     {
       "type": 0,
-      "value": "Edit member"
+      "value": "កែព័ត៌មានសមាជិក"
+    }
+  ],
+  "label.email": [
+    {
+      "type": 0,
+      "value": "Email"
     }
   ],
   "label.enable-share-url": [
@@ -383,16 +515,34 @@
       "value": "បើកការចែករំលែក URL"
     }
   ],
+  "label.end-step": [
+    {
+      "type": 0,
+      "value": "បញ្ចប់ជំហាន"
+    }
+  ],
+  "label.entry": [
+    {
+      "type": 0,
+      "value": "URL ចូល"
+    }
+  ],
   "label.event": [
     {
       "type": 0,
-      "value": "Event"
+      "value": "ព្រឹត្តិការណ៍"
     }
   ],
   "label.event-data": [
     {
       "type": 0,
-      "value": "Event data"
+      "value": "ទិន្នន័យព្រឹត្តិការណ៍"
+    }
+  ],
+  "label.event-name": [
+    {
+      "type": 0,
+      "value": "ឈ្មោះព្រឹត្តិការណ៍"
     }
   ],
   "label.events": [
@@ -401,10 +551,22 @@
       "value": "ព្រឹត្តិការណ៍"
     }
   ],
+  "label.exists": [
+    {
+      "type": 0,
+      "value": "មាន"
+    }
+  ],
+  "label.exit": [
+    {
+      "type": 0,
+      "value": "URL ចេញ"
+    }
+  ],
   "label.false": [
     {
       "type": 0,
-      "value": "False"
+      "value": "មិនពិត"
     }
   ],
   "label.field": [
@@ -422,7 +584,7 @@
   "label.filter": [
     {
       "type": 0,
-      "value": "Filter"
+      "value": "ចម្រោះ"
     }
   ],
   "label.filter-combined": [
@@ -440,13 +602,25 @@
   "label.filters": [
     {
       "type": 0,
-      "value": "Filters"
+      "value": "ចម្រោះ"
+    }
+  ],
+  "label.first-click": [
+    {
+      "type": 0,
+      "value": "ចុចដំបូង"
+    }
+  ],
+  "label.first-seen": [
+    {
+      "type": 0,
+      "value": "First seen"
     }
   ],
   "label.funnel": [
     {
       "type": 0,
-      "value": "Funnel"
+      "value": "ផ្លូវបង្ហាញ"
     }
   ],
   "label.funnel-description": [
@@ -455,16 +629,64 @@
       "value": "Understand the conversion and drop-off rate of users."
     }
   ],
+  "label.funnels": [
+    {
+      "type": 0,
+      "value": "ផ្លូវបង្ហាញ"
+    }
+  ],
+  "label.goal": [
+    {
+      "type": 0,
+      "value": "គោលដៅ"
+    }
+  ],
+  "label.goals": [
+    {
+      "type": 0,
+      "value": "គោលដៅ"
+    }
+  ],
+  "label.goals-description": [
+    {
+      "type": 0,
+      "value": "តាមដានគោលដៅរបស់អ្នកសម្រាប់ pageviews និង events។"
+    }
+  ],
   "label.greater-than": [
     {
       "type": 0,
-      "value": "Greater than"
+      "value": "ធំជាង"
     }
   ],
   "label.greater-than-equals": [
     {
       "type": 0,
-      "value": "Greater than or equals"
+      "value": "ធំជាងឬស្មើ"
+    }
+  ],
+  "label.grouped": [
+    {
+      "type": 0,
+      "value": "បានដាក់ជាក្រុម"
+    }
+  ],
+  "label.hostname": [
+    {
+      "type": 0,
+      "value": "ឈ្មោះម៉ាស៊ីន"
+    }
+  ],
+  "label.includes": [
+    {
+      "type": 0,
+      "value": "រួមបញ្ចូល"
+    }
+  ],
+  "label.insight": [
+    {
+      "type": 0,
+      "value": "ការយល់ដឹង"
     }
   ],
   "label.insights": [
@@ -482,37 +704,67 @@
   "label.is": [
     {
       "type": 0,
-      "value": "Is"
+      "value": "គឺ"
+    }
+  ],
+  "label.is-false": [
+    {
+      "type": 0,
+      "value": "មិនពិត"
     }
   ],
   "label.is-not": [
     {
       "type": 0,
-      "value": "Is not"
+      "value": "មិនមែន"
     }
   ],
   "label.is-not-set": [
     {
       "type": 0,
-      "value": "Is not set"
+      "value": "មិនបានកំណត់"
     }
   ],
   "label.is-set": [
     {
       "type": 0,
-      "value": "Is set"
+      "value": "បានកំណត់"
+    }
+  ],
+  "label.is-true": [
+    {
+      "type": 0,
+      "value": "ពិត"
     }
   ],
   "label.join": [
     {
       "type": 0,
-      "value": "Join"
+      "value": "ចូលរួម"
     }
   ],
   "label.join-team": [
     {
       "type": 0,
-      "value": "Join team"
+      "value": "ចូលក្រុម"
+    }
+  ],
+  "label.journey": [
+    {
+      "type": 0,
+      "value": "​ដំណើរ"
+    }
+  ],
+  "label.journey-description": [
+    {
+      "type": 0,
+      "value": "ស្វែងយល់ពីការប្រើប្រាស់គេហទំព័ររបស់អតិថិជនអ្នក។"
+    }
+  ],
+  "label.journeys": [
+    {
+      "type": 0,
+      "value": "ដំណើរ"
     }
   ],
   "label.language": [
@@ -533,6 +785,12 @@
       "value": "កុំព្យូទ័រយួរដៃ"
     }
   ],
+  "label.last-click": [
+    {
+      "type": 0,
+      "value": "ចុចចុងក្រោយ"
+    }
+  ],
   "label.last-days": [
     {
       "type": 1,
@@ -540,7 +798,7 @@
     },
     {
       "type": 0,
-      "value": " ថ្ងៃមុន"
+      "value": " ថ្ងៃចុងក្រោយ"
     }
   ],
   "label.last-hours": [
@@ -550,45 +808,53 @@
     },
     {
       "type": 0,
-      "value": " ម៉ោងមុន"
+      "value": " ម៉ោងចុងក្រោយ"
     }
   ],
   "label.last-months": [
-    {
-      "type": 0,
-      "value": "Last "
-    },
     {
       "type": 1,
       "value": "x"
     },
     {
       "type": 0,
-      "value": " months"
+      "value": " ខែចុងក្រោយ"
+    }
+  ],
+  "label.last-seen": [
+    {
+      "type": 0,
+      "value": "Last seen"
     }
   ],
   "label.leave": [
     {
       "type": 0,
-      "value": "Leave"
+      "value": "ចាកចេញ"
     }
   ],
   "label.leave-team": [
     {
       "type": 0,
-      "value": "Leave team"
+      "value": "ចេញពីក្រុម"
     }
   ],
   "label.less-than": [
     {
       "type": 0,
-      "value": "Less than"
+      "value": "តិច​ជាង"
     }
   ],
   "label.less-than-equals": [
     {
       "type": 0,
-      "value": "Less than or equals"
+      "value": "តិចជាង ឬស្មើ"
+    }
+  ],
+  "label.links": [
+    {
+      "type": 0,
+      "value": "តំណភ្ជាប់"
     }
   ],
   "label.login": [
@@ -600,13 +866,19 @@
   "label.logout": [
     {
       "type": 0,
-      "value": "ចេញ"
+      "value": "Logout"
     }
   ],
   "label.manage": [
     {
       "type": 0,
-      "value": "Manage"
+      "value": "គ្រប់គ្រង"
+    }
+  ],
+  "label.manager": [
+    {
+      "type": 0,
+      "value": "អ្នកគ្រប់គ្រង"
     }
   ],
   "label.max": [
@@ -615,16 +887,28 @@
       "value": "Max"
     }
   ],
+  "label.maximize": [
+    {
+      "type": 0,
+      "value": "ពង្រីក"
+    }
+  ],
+  "label.medium": [
+    {
+      "type": 0,
+      "value": "មធ្យម"
+    }
+  ],
   "label.member": [
     {
       "type": 0,
-      "value": "Member"
+      "value": "សមាជិក"
     }
   ],
   "label.members": [
     {
       "type": 0,
-      "value": "Members"
+      "value": "សមាជិក"
     }
   ],
   "label.min": [
@@ -639,6 +923,12 @@
       "value": "ទូរស័ព្ទចល័ត"
     }
   ],
+  "label.model": [
+    {
+      "type": 0,
+      "value": "ម៉ូដែល"
+    }
+  ],
   "label.more": [
     {
       "type": 0,
@@ -648,13 +938,13 @@
   "label.my-account": [
     {
       "type": 0,
-      "value": "My account"
+      "value": "គណនី​របស់ខ្ញុំ"
     }
   ],
   "label.my-websites": [
     {
       "type": 0,
-      "value": "My websites"
+      "value": "គេហទំព័ររបស់ខ្ញុំ"
     }
   ],
   "label.name": [
@@ -672,7 +962,7 @@
   "label.none": [
     {
       "type": 0,
-      "value": "មិនមាន"
+      "value": "គ្មាន"
     }
   ],
   "label.number-of-records": [
@@ -715,16 +1005,52 @@
       "value": "OK"
     }
   ],
+  "label.online": [
+    {
+      "type": 0,
+      "value": "Online"
+    }
+  ],
+  "label.organic-search": [
+    {
+      "type": 0,
+      "value": "ស្វែងរកធម្មជាតិ"
+    }
+  ],
+  "label.organic-shopping": [
+    {
+      "type": 0,
+      "value": "ការទិញធម្មជាតិ"
+    }
+  ],
+  "label.organic-social": [
+    {
+      "type": 0,
+      "value": "សង្គមធម្មជាតិ"
+    }
+  ],
+  "label.organic-video": [
+    {
+      "type": 0,
+      "value": "វីដេអូធម្មជាតិ"
+    }
+  ],
   "label.os": [
     {
       "type": 0,
       "value": "OS"
     }
   ],
+  "label.other": [
+    {
+      "type": 0,
+      "value": "ផ្សេងទៀត"
+    }
+  ],
   "label.overview": [
     {
       "type": 0,
-      "value": "Overview"
+      "value": "ទិដ្ឋភាពរួម"
     }
   ],
   "label.owner": [
@@ -733,10 +1059,16 @@
       "value": "ម្ចាស់"
     }
   ],
+  "label.page": [
+    {
+      "type": 0,
+      "value": "ទំព័រ"
+    }
+  ],
   "label.page-of": [
     {
       "type": 0,
-      "value": "Page "
+      "value": "ទំព័រទី "
     },
     {
       "type": 1,
@@ -744,7 +1076,7 @@
     },
     {
       "type": 0,
-      "value": " of "
+      "value": " នៃ "
     },
     {
       "type": 1,
@@ -760,7 +1092,7 @@
   "label.pageTitle": [
     {
       "type": 0,
-      "value": "Page title"
+      "value": "ចំណងជើងទំព័រ"
     }
   ],
   "label.pages": [
@@ -769,10 +1101,58 @@
       "value": "ទំព័រ"
     }
   ],
+  "label.paid-ads": [
+    {
+      "type": 0,
+      "value": "ផ្សាយពាណិជ្ជកម្មបង់ប្រាក់"
+    }
+  ],
+  "label.paid-search": [
+    {
+      "type": 0,
+      "value": "ស្វែងរកបង់ប្រាក់"
+    }
+  ],
+  "label.paid-shopping": [
+    {
+      "type": 0,
+      "value": "ទិញបង់ប្រាក់"
+    }
+  ],
+  "label.paid-social": [
+    {
+      "type": 0,
+      "value": "សង្គមបង់ប្រាក់"
+    }
+  ],
+  "label.paid-video": [
+    {
+      "type": 0,
+      "value": "វីដេអូបង់ប្រាក់"
+    }
+  ],
   "label.password": [
     {
       "type": 0,
       "value": "ពាក្យសម្ងាត់​"
+    }
+  ],
+  "label.path": [
+    {
+      "type": 0,
+      "value": "Path"
+    }
+  ],
+  "label.paths": [
+    {
+      "type": 0,
+      "value": "Paths"
+    }
+  ],
+  "label.pixels": [
+    {
+      "type": 0,
+      "value": "ភីកសែល"
     }
   ],
   "label.powered-by": [
@@ -785,10 +1165,40 @@
       "value": "name"
     }
   ],
+  "label.previous": [
+    {
+      "type": 0,
+      "value": "មុន"
+    }
+  ],
+  "label.previous-period": [
+    {
+      "type": 0,
+      "value": "មួយរយៈពេលមុន"
+    }
+  ],
+  "label.previous-year": [
+    {
+      "type": 0,
+      "value": "ឆ្នាំ​មុន"
+    }
+  ],
   "label.profile": [
     {
       "type": 0,
-      "value": "ប្រវត្តិរូប"
+      "value": "គណនី"
+    }
+  ],
+  "label.properties": [
+    {
+      "type": 0,
+      "value": "លក្ខណៈពិសេស"
+    }
+  ],
+  "label.property": [
+    {
+      "type": 0,
+      "value": "លក្ខណៈពិសេស"
     }
   ],
   "label.queries": [
@@ -815,10 +1225,16 @@
       "value": "ឥលូវនេះ"
     }
   ],
+  "label.referral": [
+    {
+      "type": 0,
+      "value": "ការបញ្ជូន"
+    }
+  ],
   "label.referrer": [
     {
       "type": 0,
-      "value": "Referrer"
+      "value": "អ្នកណែនាំ"
     }
   ],
   "label.referrers": [
@@ -842,31 +1258,37 @@
   "label.region": [
     {
       "type": 0,
-      "value": "Region"
+      "value": "តំបន់"
     }
   ],
   "label.regions": [
     {
       "type": 0,
-      "value": "Regions"
+      "value": "តំបន់"
+    }
+  ],
+  "label.remaining": [
+    {
+      "type": 0,
+      "value": "នៅសល់"
     }
   ],
   "label.remove": [
     {
       "type": 0,
-      "value": "Remove"
+      "value": "លុប"
     }
   ],
   "label.remove-member": [
     {
       "type": 0,
-      "value": "Remove member"
+      "value": "លុបសមាជិកក្រុម"
     }
   ],
   "label.reports": [
     {
       "type": 0,
-      "value": "Reports"
+      "value": "របាយការណ៍"
     }
   ],
   "label.required": [
@@ -878,19 +1300,27 @@
   "label.reset": [
     {
       "type": 0,
-      "value": "កំណត់ឡើងវិញ"
+      "value": "កែសម្រួល"
     }
   ],
   "label.reset-website": [
     {
       "type": 0,
-      "value": "កំណត់ស្ថិតិឡើងវិញ"
+      "value": "ដើម្បីកែគេហទំព័រនេះឡើងវិញ សូមសរសេរ "
+    },
+    {
+      "type": 1,
+      "value": "confirmation"
+    },
+    {
+      "type": 0,
+      "value": " នៅក្នុងប្រអប់ខាងក្រោមដើម្បីបញ្ជាក់។"
     }
   ],
   "label.retention": [
     {
       "type": 0,
-      "value": "Retention"
+      "value": "ការរក្សាទុក"
     }
   ],
   "label.retention-description": [
@@ -899,10 +1329,22 @@
       "value": "Measure your website stickiness by tracking how often users return."
     }
   ],
+  "label.revenue": [
+    {
+      "type": 0,
+      "value": "Revenue"
+    }
+  ],
+  "label.revenue-description": [
+    {
+      "type": 0,
+      "value": "Look into your revenue across time."
+    }
+  ],
   "label.role": [
     {
       "type": 0,
-      "value": "Role"
+      "value": "មុខងារ"
     }
   ],
   "label.run-query": [
@@ -926,31 +1368,49 @@
   "label.search": [
     {
       "type": 0,
-      "value": "Search"
+      "value": "ស្វែងរក"
     }
   ],
   "label.select": [
     {
       "type": 0,
-      "value": "Select"
+      "value": "ជ្រើសរើស"
     }
   ],
   "label.select-date": [
     {
       "type": 0,
-      "value": "Select date"
+      "value": "ជ្រើសរើសកាលបរិច្ឆេទ"
+    }
+  ],
+  "label.select-filter": [
+    {
+      "type": 0,
+      "value": "ជ្រើសរើសតម្រង"
     }
   ],
   "label.select-role": [
     {
       "type": 0,
-      "value": "Select role"
+      "value": "ជ្រើសរើសមុខងារ"
     }
   ],
   "label.select-website": [
     {
       "type": 0,
-      "value": "Select website"
+      "value": "ជ្រើសរើសគេហទំព័រ"
+    }
+  ],
+  "label.session": [
+    {
+      "type": 0,
+      "value": "Session"
+    }
+  ],
+  "label.session-data": [
+    {
+      "type": 0,
+      "value": "ទិន្នន័យសម័យ"
     }
   ],
   "label.sessions": [
@@ -965,6 +1425,12 @@
       "value": "ការកំណត់"
     }
   ],
+  "label.share": [
+    {
+      "type": 0,
+      "value": "ចែករំលែក"
+    }
+  ],
   "label.share-url": [
     {
       "type": 0,
@@ -977,10 +1443,28 @@
       "value": "ថ្ងៃតែមួយ"
     }
   ],
+  "label.sms": [
+    {
+      "type": 0,
+      "value": "SMS"
+    }
+  ],
+  "label.sources": [
+    {
+      "type": 0,
+      "value": "ប្រភព"
+    }
+  ],
+  "label.start-step": [
+    {
+      "type": 0,
+      "value": "ជំហានចាប់ផ្តើម"
+    }
+  ],
   "label.steps": [
     {
       "type": 0,
-      "value": "Steps"
+      "value": "ជំហាន"
     }
   ],
   "label.sum": [
@@ -995,34 +1479,58 @@
       "value": "ថេប្លេត"
     }
   ],
+  "label.tag": [
+    {
+      "type": 0,
+      "value": "ស្លាក"
+    }
+  ],
+  "label.tags": [
+    {
+      "type": 0,
+      "value": "ស្លាក"
+    }
+  ],
   "label.team": [
     {
       "type": 0,
-      "value": "Team"
+      "value": "ក្រុម"
     }
   ],
   "label.team-id": [
     {
       "type": 0,
-      "value": "Team ID"
+      "value": "ID ក្រុម"
+    }
+  ],
+  "label.team-manager": [
+    {
+      "type": 0,
+      "value": "អ្នកគ្រប់គ្រងក្រុម"
     }
   ],
   "label.team-member": [
     {
       "type": 0,
-      "value": "Team member"
+      "value": "សមាជិកក្រុម"
     }
   ],
   "label.team-name": [
     {
       "type": 0,
-      "value": "Team name"
+      "value": "ឈ្មោះក្រុម"
     }
   ],
   "label.team-owner": [
     {
       "type": 0,
-      "value": "Team owner"
+      "value": "ម្ចាស់ក្រុម"
+    }
+  ],
+  "label.team-settings": [
+    {
+      "type": 0,
+      "value": "ការកំណត់ក្រុម"
     }
   ],
   "label.team-view-only": [
@@ -1034,13 +1542,19 @@
   "label.team-websites": [
     {
       "type": 0,
-      "value": "Team websites"
+      "value": "គេហទំព័ររបស់ក្រុម"
     }
   ],
   "label.teams": [
     {
       "type": 0,
-      "value": "Teams"
+      "value": "ក្រុម"
+    }
+  ],
+  "label.terms": [
+    {
+      "type": 0,
+      "value": "លក្ខខណ្ឌ"
     }
   ],
   "label.theme": [
@@ -1076,7 +1590,7 @@
   "label.title": [
     {
       "type": 0,
-      "value": "Title"
+      "value": "ចំណងជើង"
     }
   ],
   "label.today": [
@@ -1094,13 +1608,13 @@
   "label.total": [
     {
       "type": 0,
-      "value": "Total"
+      "value": "សរុប"
     }
   ],
   "label.total-records": [
     {
       "type": 0,
-      "value": "Total records"
+      "value": "កំណត់ត្រាសរុប"
     }
   ],
   "label.tracking-code": [
@@ -1109,22 +1623,28 @@
       "value": "លេខកូដតាមដាន"
     }
   ],
+  "label.transactions": [
+    {
+      "type": 0,
+      "value": "Transactions"
+    }
+  ],
   "label.transfer": [
     {
       "type": 0,
-      "value": "Transfer"
+      "value": "ការផ្ទេរ"
     }
   ],
   "label.transfer-website": [
     {
       "type": 0,
-      "value": "Transfer website"
+      "value": "ការផ្ទេរគេហទំព័រ"
     }
   ],
   "label.true": [
     {
       "type": 0,
-      "value": "True"
+      "value": "ពិត"
     }
   ],
   "label.type": [
@@ -1145,6 +1665,12 @@
       "value": "អ្នកចូលមើលម្នាក់ៗ"
     }
   ],
+  "label.uniqueCustomers": [
+    {
+      "type": 0,
+      "value": "Unique Customers"
+    }
+  ],
   "label.unknown": [
     {
       "type": 0,
@@ -1154,7 +1680,7 @@
   "label.untitled": [
     {
       "type": 0,
-      "value": "Untitled"
+      "value": "គ្មានចំណងជើង"
     }
   ],
   "label.update": [
@@ -1163,22 +1689,10 @@
       "value": "Update"
     }
   ],
-  "label.url": [
-    {
-      "type": 0,
-      "value": "URL"
-    }
-  ],
-  "label.urls": [
-    {
-      "type": 0,
-      "value": "URLs"
-    }
-  ],
   "label.user": [
     {
       "type": 0,
-      "value": "User"
+      "value": "អ្នកប្រើប្រាស់"
     }
   ],
   "label.username": [
@@ -1190,7 +1704,7 @@
   "label.users": [
     {
       "type": 0,
-      "value": "Users"
+      "value": "អ្នកប្រើប្រាស់"
     }
   ],
   "label.utm": [
@@ -1202,7 +1716,7 @@
   "label.utm-description": [
     {
       "type": 0,
-      "value": "Track your campaigns through UTM parameters."
+      "value": "តាមដានយុទ្ធនាការរបស់អ្នកតាមរយៈប៉ារ៉ាម៉ែត្រ UTM។"
     }
   ],
   "label.value": [
@@ -1226,7 +1740,7 @@
   "label.view-only": [
     {
       "type": 0,
-      "value": "View only"
+      "value": "បានតែមើលប៉ុណ្ណោះ"
     }
   ],
   "label.views": [
@@ -1241,6 +1755,12 @@
       "value": "Views per visit"
     }
   ],
+  "label.visit-duration": [
+    {
+      "type": 0,
+      "value": "រយៈពេលទស្សនា"
+    }
+  ],
   "label.visitors": [
     {
       "type": 0,
@@ -1250,19 +1770,19 @@
   "label.visits": [
     {
       "type": 0,
-      "value": "Visits"
+      "value": "ទស្សនា"
     }
   ],
   "label.website": [
     {
       "type": 0,
-      "value": "Website"
+      "value": "គេហទំព័រ"
     }
   ],
   "label.website-id": [
     {
       "type": 0,
-      "value": "Website ID"
+      "value": "ID គេហទំព័រ"
     }
   ],
   "label.websites": [
@@ -1286,7 +1806,7 @@
   "message.action-confirmation": [
     {
       "type": 0,
-      "value": "Type "
+      "value": "សសេរ "
     },
     {
       "type": 1,
@@ -1294,7 +1814,7 @@
     },
     {
       "type": 0,
-      "value": " in the box below to confirm."
+      "value": " នៅក្នុងប្រអប់ខាងក្រោមដើម្បីបញ្ជាក់។"
     }
   ],
   "message.active-users": [
@@ -1309,6 +1829,18 @@
     {
       "type": 0,
       "value": " នាក់ ឥលូវនេះ"
+    }
+  ],
+  "message.bad-request": [
+    {
+      "type": 0,
+      "value": "Bad request"
+    }
+  ],
+  "message.collected-data": [
+    {
+      "type": 0,
+      "value": "ទិន្នន័យដែលបានប្រមូលទុក"
     }
   ],
   "message.confirm-delete": [
@@ -1328,7 +1860,7 @@
   "message.confirm-leave": [
     {
       "type": 0,
-      "value": "Are you sure you want to leave "
+      "value": "តើអ្នកប្រាកដថាចង់ចាកចេញ "
     },
     {
       "type": 1,
@@ -1336,13 +1868,13 @@
     },
     {
       "type": 0,
-      "value": "?"
+      "value": " ទេ?"
     }
   ],
   "message.confirm-remove": [
     {
       "type": 0,
-      "value": "Are you sure you want to remove "
+      "value": "តើអ្នកប្រាកដថាចង់លុប "
     },
     {
       "type": 1,
@@ -1350,7 +1882,7 @@
     },
     {
       "type": 0,
-      "value": "?"
+      "value": " ទេ?"
     }
   ],
   "message.confirm-reset": [
@@ -1370,13 +1902,13 @@
   "message.delete-team-warning": [
     {
       "type": 0,
-      "value": "Deleting a team will also delete all team websites."
+      "value": "ពេលលុបក្រុម គេហទំព័ររបស់ក្រុមក៏នឹងត្រូវលប់ចោលទាំងអស់ផងដែរ។"
     }
   ],
   "message.delete-website-warning": [
     {
       "type": 0,
-      "value": "ទិន្នន័យដែលពាក់ព័ន្ធទាំងអស់នឹងត្រូវបានលុបផងដែរ។"
+      "value": "ទិន្នន័យរបស់គេហទំព័រទាំងអស់នឹងត្រូវលុបចោល។"
     }
   ],
   "message.error": [
@@ -1399,6 +1931,12 @@
       "value": "url"
     }
   ],
+  "message.forbidden": [
+    {
+      "type": 0,
+      "value": "Forbidden"
+    }
+  ],
   "message.go-to-settings": [
     {
       "type": 0,
@@ -1408,19 +1946,19 @@
   "message.incorrect-username-password": [
     {
       "type": 0,
-      "value": "ឈ្មោះអ្នកប្រើ/ពាក្យសម្ងាត់មិនត្រឹមត្រូវ។"
+      "value": "ឈ្មោះអ្នកប្រើឬពាក្យសម្ងាត់មិនត្រឹមត្រូវ។"
     }
   ],
   "message.invalid-domain": [
     {
       "type": 0,
-      "value": "ឈ្មោះគេហទំព័រមិន​ត្រឹមត្រូវ"
+      "value": "Domain មិន​ត្រឹមត្រូវ"
     }
   ],
   "message.min-password-length": [
     {
       "type": 0,
-      "value": "Minimum length of "
+      "value": "តិចបំផុតដែលមានអក្សរ "
     },
     {
       "type": 1,
@@ -1428,13 +1966,13 @@
     },
     {
       "type": 0,
-      "value": " characters"
+      "value": " តួអក្សរ"
     }
   ],
   "message.new-version-available": [
     {
       "type": 0,
-      "value": "A new version of Umami "
+      "value": "Version ថ្មីនៃ Umami "
     },
     {
       "type": 1,
@@ -1442,55 +1980,67 @@
     },
     {
       "type": 0,
-      "value": " is available!"
+      "value": " អាចប្រើប្រាស់បានហើយ!"
     }
   ],
   "message.no-data-available": [
     {
       "type": 0,
-      "value": "មិនមានទិន្នន័យទេ។"
+      "value": "មិនមានទិន្នន័យ។"
     }
   ],
   "message.no-event-data": [
     {
       "type": 0,
-      "value": "No event data is available."
+      "value": "មិនមានទិន្នន័យព្រឹត្តិការណ៍ទេ។"
     }
   ],
   "message.no-match-password": [
     {
       "type": 0,
-      "value": "ពាក្យសម្ងាត់មិនត្រូវគ្នាទេ"
+      "value": "ពាក្យសម្ងាត់មិនត្រូវគ្នាទេ។"
     }
   ],
   "message.no-results-found": [
     {
       "type": 0,
-      "value": "No results were found."
+      "value": "មិនមានលទ្ធផល។"
     }
   ],
   "message.no-team-websites": [
     {
       "type": 0,
-      "value": "This team does not have any websites."
+      "value": "ក្រុមនេះមិនមានគេហទំព័រទេ។"
     }
   ],
   "message.no-teams": [
     {
       "type": 0,
-      "value": "You have not created any teams."
+      "value": "អ្នកមិនទាន់បានបង្កើតក្រុមណាមួយទេ។"
     }
   ],
   "message.no-users": [
     {
       "type": 0,
-      "value": "There are no users."
+      "value": "មិនមានអ្នកប្រើប្រាស់ទេ។"
     }
   ],
   "message.no-websites-configured": [
     {
       "type": 0,
       "value": "អ្នកមិនទាន់បានដាក់គេហទំព័រណាមួយចូលទេ។"
+    }
+  ],
+  "message.not-found": [
+    {
+      "type": 0,
+      "value": "Not found"
+    }
+  ],
+  "message.nothing-selected": [
+    {
+      "type": 0,
+      "value": "Nothing selected."
     }
   ],
   "message.page-not-found": [
@@ -1502,7 +2052,7 @@
   "message.reset-website": [
     {
       "type": 0,
-      "value": "To reset this website, type "
+      "value": "ដើម្បីកែគេហទំព័រនេះឡើងវិញ សូមសរសេរ "
     },
     {
       "type": 1,
@@ -1510,7 +2060,7 @@
     },
     {
       "type": 0,
-      "value": " in the box below to confirm."
+      "value": " នៅក្នុងប្រអប់ខាងក្រោមដើម្បីបញ្ជាក់។"
     }
   ],
   "message.reset-website-warning": [
@@ -1525,10 +2075,16 @@
       "value": "រក្សាទុកដោយជោគជ័យ។"
     }
   ],
+  "message.sever-error": [
+    {
+      "type": 0,
+      "value": "Server error"
+    }
+  ],
   "message.share-url": [
     {
       "type": 0,
-      "value": "នេះគឺជា URL ដែលបានចែករំលែកជាសាធារណៈសម្រាប់ "
+      "value": "នេះគឺជា URL ដែលអាចចែករំលែកជាសាធារណៈបានសម្រាប់ "
     },
     {
       "type": 1,
@@ -1542,43 +2098,57 @@
   "message.team-already-member": [
     {
       "type": 0,
-      "value": "You are already a member of the team."
+      "value": "អ្នកគឺជាសមាជិកនៃក្រុមរួចហើយ។"
     }
   ],
   "message.team-not-found": [
     {
       "type": 0,
-      "value": "Team not found."
+      "value": "រកក្រុមមិនឃើញទេ។"
     }
   ],
   "message.team-websites-info": [
     {
       "type": 0,
-      "value": "Websites can be viewed by anyone on the team."
+      "value": "គេហទំព័រនេះអាចមើលបានតែសមាជិកក្រុមតែប៉ុណ្ណោះ"
     }
   ],
   "message.tracking-code": [
     {
       "type": 0,
-      "value": "លេខកូដតាមដាន"
+      "value": "ដើម្បីតាមដានស្ថិតិសម្រាប់គេហទំព័រអ្នក សូមដាក់កូដខាងក្រោមទៅក្នុងផ្នែក "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "..."
+        }
+      ],
+      "type": 8,
+      "value": "head"
+    },
+    {
+      "type": 0,
+      "value": " នៃ HTML របស់អ្នក។"
     }
   ],
   "message.transfer-team-website-to-user": [
     {
       "type": 0,
-      "value": "Transfer this website to your account?"
+      "value": "ផ្ទេរគេហទំព័រនេះទៅគណនីរបស់អ្នក។?"
     }
   ],
   "message.transfer-user-website-to-team": [
     {
       "type": 0,
-      "value": "Select the team to transfer this website to."
+      "value": "ជ្រើសក្រុមដែរត្រូវផ្ទេរគេហទំព័រនេះទៅ។"
     }
   ],
   "message.transfer-website": [
     {
       "type": 0,
-      "value": "Transfer website ownership to your account or another team."
+      "value": "ផ្ទេរកម្មសិទ្ធិគេហទំព័រទៅគណនីរបស់អ្នក ឬក្រុមផ្សេងទៀត។"
     }
   ],
   "message.triggered-event": [
@@ -1587,16 +2157,22 @@
       "value": "Triggered event"
     }
   ],
+  "message.unauthorized": [
+    {
+      "type": 0,
+      "value": "Unauthorized"
+    }
+  ],
   "message.user-deleted": [
     {
       "type": 0,
-      "value": "User deleted."
+      "value": "អ្នកប្រើប្រាស់ត្រូវបានលុបចោល។"
     }
   ],
   "message.viewed-page": [
     {
       "type": 0,
-      "value": "Viewed page"
+      "value": "ទំព័រដែលបានមើល"
     }
   ],
   "message.visitor-log": [
@@ -1631,12 +2207,6 @@
     {
       "type": 1,
       "value": "device"
-    }
-  ],
-  "message.visitors-dropped-off": [
-    {
-      "type": 0,
-      "value": "Visitors dropped off"
     }
   ]
 }

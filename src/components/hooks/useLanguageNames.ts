@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { httpGet } from 'next-basics';
+import { useEffect, useState } from 'react';
+import { httpGet } from '@/lib/fetch';
 import enUS from '../../../public/intl/language/en-US.json';
 
 const languageNames = {
@@ -10,7 +10,7 @@ export function useLanguageNames(locale) {
   const [list, setList] = useState(languageNames[locale] || enUS);
 
   async function loadData(locale) {
-    const { data } = await httpGet(`${process.env.basePath}/intl/language/${locale}.json`);
+    const { data } = await httpGet(`${process.env.basePath || ''}/intl/language/${locale}.json`);
 
     if (data) {
       languageNames[locale] = data;
@@ -28,7 +28,5 @@ export function useLanguageNames(locale) {
     }
   }, [locale]);
 
-  return list;
+  return { languageNames: list };
 }
-
-export default useLanguageNames;

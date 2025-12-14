@@ -1,27 +1,43 @@
-import { useState, useMemo } from 'react';
-import { ComposableMap, Geographies, Geography, ZoomableGroup } from 'react-simple-maps';
-import classNames from 'classnames';
+import { Column, type ColumnProps, FloatingTooltip, useTheme } from '@umami/react-zen';
 import { colord } from 'colord';
-import HoverTooltip from 'components/common/HoverTooltip';
-import { ISO_COUNTRIES, MAP_FILE } from 'lib/constants';
-import { useTheme } from 'components/hooks';
-import { useCountryNames } from 'components/hooks';
-import { useLocale } from 'components/hooks';
-import { useMessages } from 'components/hooks';
-import { formatLongNumber } from 'lib/format';
-import { percentFilter } from 'lib/filters';
-import styles from './WorldMap.module.css';
+import { useMemo, useState } from 'react';
+import { ComposableMap, Geographies, Geography, ZoomableGroup } from 'react-simple-maps';
+import {
+  useCountryNames,
+  useLocale,
+  useMessages,
+  useWebsiteMetricsQuery,
+} from '@/components/hooks';
+import { getThemeColors } from '@/lib/colors';
+import { ISO_COUNTRIES, MAP_FILE } from '@/lib/constants';
+import { percentFilter } from '@/lib/filters';
+import { formatLongNumber } from '@/lib/format';
 
-export function WorldMap({ data = [], className }: { data?: any[]; className?: string }) {
+export interface WorldMapProps extends ColumnProps {
+  websiteId?: string;
+  data?: any[];
+}
+
+export function WorldMap({ websiteId, data, ...props }: WorldMapProps) {
   const [tooltip, setTooltipPopup] = useState();
-  const { theme, colors } = useTheme();
+  const { theme } = useTheme();
+  const { colors } = getThemeColors(theme);
   const { locale } = useLocale();
   const { formatMessage, labels } = useMessages();
-  const countryNames = useCountryNames(locale);
+  const { countryNames } = useCountryNames(locale);
   const visitorsLabel = formatMessage(labels.visitors).toLocaleLowerCase(locale);
-  const metrics = useMemo(() => (data ? percentFilter(data) : []), [data]);
+  const unknownLabel = formatMessage(labels.unknown);
 
-  function getFillColor(code: string) {
+  const { data: mapData } = useWebsiteMetricsQuery(websiteId, {
+    type: 'country',
+  });
+
+  const metrics = useMemo(
+    () => (data || mapData ? percentFilter((data || mapData) as any[]) : []),
+    [data, mapData],
+  );
+
+  const getFillColor = (code: string) => {
     if (code === 'AQ') return;
     const country = metrics?.find(({ x }) => x === code);
 
@@ -32,29 +48,32 @@ export function WorldMap({ data = [], className }: { data?: any[]; className?: s
     return colord(colors.map.baseColor)
       [theme === 'light' ? 'lighten' : 'darken'](0.4 * (1.0 - country.z / 100))
       .toHex();
-  }
+  };
 
-  function getOpacity(code) {
+  const getOpacity = (code: string) => {
     return code === 'AQ' ? 0 : 1;
-  }
+  };
 
-  function handleHover(code) {
+  const handleHover = (code: string) => {
     if (code === 'AQ') return;
     const country = metrics?.find(({ x }) => x === code);
     setTooltipPopup(
-      `${countryNames[code]}: ${formatLongNumber(country?.y || 0)} ${visitorsLabel}` as any,
+      `${countryNames[code] || unknownLabel}: ${formatLongNumber(
+        country?.y || 0,
+      )} ${visitorsLabel}` as any,
     );
-  }
+  };
 
   return (
-    <div
-      className={classNames(styles.container, className)}
+    <Column
+      {...props}
       data-tip=""
       data-for="world-map-tooltip"
+      style={{ margin: 'auto 0', overflow: 'hidden' }}
     >
       <ComposableMap projection="geoMercator">
         <ZoomableGroup zoom={0.8} minZoom={0.7} center={[0, 40]}>
-          <Geographies geography={`${process.env.basePath}${MAP_FILE}`}>
+          <Geographies geography={`${process.env.basePath || ''}${MAP_FILE}`}>
             {({ geographies }) => {
               return geographies.map(geo => {
                 const code = ISO_COUNTRIES[geo.id];
@@ -80,9 +99,7 @@ export function WorldMap({ data = [], className }: { data?: any[]; className?: s
           </Geographies>
         </ZoomableGroup>
       </ComposableMap>
-      {tooltip && <HoverTooltip>{tooltip}</HoverTooltip>}
-    </div>
+      {tooltip && <FloatingTooltip>{tooltip}</FloatingTooltip>}
+    </Column>
   );
 }
-
-export default WorldMap;

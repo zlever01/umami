@@ -1,28 +1,9 @@
+import { isBefore, startOfMinute, subMinutes } from 'date-fns';
 import { useMemo, useRef } from 'react';
-import { format, startOfMinute, subMinutes, isBefore } from 'date-fns';
-import PageviewsChart from './PageviewsChart';
-import { getDateArray } from 'lib/date';
-import { DEFAULT_ANIMATION_DURATION, REALTIME_RANGE } from 'lib/constants';
-import { RealtimeData } from 'lib/types';
-
-function mapData(data: any[]) {
-  let last = 0;
-  const arr = [];
-
-  data?.reduce((obj, { timestamp }) => {
-    const t = startOfMinute(new Date(timestamp));
-    if (t.getTime() > last) {
-      obj = { x: format(t, 'yyyy-LL-dd HH:mm:00'), y: 1 };
-      arr.push(obj);
-      last = t.getTime();
-    } else {
-      obj.y += 1;
-    }
-    return obj;
-  }, {});
-
-  return arr;
-}
+import { useTimezone } from '@/components/hooks';
+import { DEFAULT_ANIMATION_DURATION, REALTIME_RANGE } from '@/lib/constants';
+import type { RealtimeData } from '@/lib/types';
+import { PageviewsChart } from './PageviewsChart';
 
 export interface RealtimeChartProps {
   data: RealtimeData;
@@ -31,9 +12,11 @@ export interface RealtimeChartProps {
 }
 
 export function RealtimeChart({ data, unit, ...props }: RealtimeChartProps) {
+  const { formatSeriesTimezone, fromUtc, timezone } = useTimezone();
   const endDate = startOfMinute(new Date());
   const startDate = subMinutes(endDate, REALTIME_RANGE);
   const prevEndDate = useRef(endDate);
+  const prevData = useRef<string | null>(null);
 
   const chartData = useMemo(() => {
     if (!data) {
@@ -41,23 +24,36 @@ export function RealtimeChart({ data, unit, ...props }: RealtimeChartProps) {
     }
 
     return {
-      pageviews: getDateArray(mapData(data.pageviews), startDate, endDate, unit),
-      sessions: getDateArray(mapData(data.visitors), startDate, endDate, unit),
+      pageviews: formatSeriesTimezone(data.series.views, 'x', timezone),
+      sessions: formatSeriesTimezone(data.series.visitors, 'x', timezone),
     };
   }, [data, startDate, endDate, unit]);
 
-  // Don't animate the bars shifting over because it looks weird
   const animationDuration = useMemo(() => {
+    // Don't animate the bars shifting over because it looks weird
     if (isBefore(prevEndDate.current, endDate)) {
       prevEndDate.current = endDate;
       return 0;
     }
+
+    // Don't animate when data hasn't changed
+    const serialized = JSON.stringify(chartData);
+    if (prevData.current === serialized) {
+      return 0;
+    }
+    prevData.current = serialized;
+
     return DEFAULT_ANIMATION_DURATION;
-  }, [endDate]);
+  }, [endDate, chartData]);
 
   return (
-    <PageviewsChart {...props} unit={unit} data={chartData} animationDuration={animationDuration} />
+    <PageviewsChart
+      {...props}
+      minDate={fromUtc(startDate)}
+      maxDate={fromUtc(endDate)}
+      unit={unit}
+      data={chartData}
+      animationDuration={animationDuration}
+    />
   );
 }
-
-export default RealtimeChart;

@@ -1,8 +1,8 @@
 import { DATA_TYPE, DATETIME_REGEX } from './constants';
-import { DynamicDataType } from './types';
+import type { DynamicDataType } from './types';
 
 export function flattenJSON(
-  eventData: { [key: string]: any },
+  eventData: Record<string, any>,
   keyValues: { key: string; value: any; dataType: DynamicDataType }[] = [],
   parentKey = '',
 ): { key: string; value: any; dataType: DynamicDataType }[] {
@@ -87,4 +87,8 @@ function getKeyName(key: string, parentKey: string) {
   }
 
   return `${parentKey}.${key}`;
+}
+
+export function objectToArray(obj: object) {
+  return Object.keys(obj).map(key => obj[key]);
 }

@@ -1,99 +1,88 @@
-import classNames from 'classnames';
-import { useMessages, useSticky } from 'components/hooks';
-import WebsiteDateFilter from 'components/input/WebsiteDateFilter';
-import MetricCard from 'components/metrics/MetricCard';
-import MetricsBar from 'components/metrics/MetricsBar';
-import { formatShortTime } from 'lib/format';
-import WebsiteFilterButton from './WebsiteFilterButton';
-import styles from './WebsiteMetricsBar.module.css';
-import useWebsiteStats from 'components/hooks/queries/useWebsiteStats';
+import { LoadingPanel } from '@/components/common/LoadingPanel';
+import { useDateRange, useMessages } from '@/components/hooks';
+import { useWebsiteStatsQuery } from '@/components/hooks/queries/useWebsiteStatsQuery';
+import { MetricCard } from '@/components/metrics/MetricCard';
+import { MetricsBar } from '@/components/metrics/MetricsBar';
+import { formatLongNumber, formatShortTime } from '@/lib/format';
 
 export function WebsiteMetricsBar({
   websiteId,
-  showFilter = true,
-  sticky,
 }: {
   websiteId: string;
-  showFilter?: boolean;
-  sticky?: boolean;
+  showChange?: boolean;
+  compareMode?: boolean;
 }) {
-  const { formatMessage, labels } = useMessages();
-  const { ref, isSticky } = useSticky({ enabled: sticky });
-  const { data, isLoading, isFetched, error } = useWebsiteStats(websiteId);
+  const { isAllTime } = useDateRange();
+  const { formatMessage, labels, getErrorMessage } = useMessages();
+  const { data, isLoading, isFetching, error } = useWebsiteStatsQuery(websiteId);
 
-  const { pageviews, visitors, visits, bounces, totaltime } = data || {};
-  const num = Math.min(data && visitors.value, data && bounces.value);
-  const diffs = data && {
-    pageviews: pageviews.value - pageviews.change,
-    visitors: visitors.value - visitors.change,
-    visits: visits.value - visits.change,
-    bounces: bounces.value - bounces.change,
-    totaltime: totaltime.value - totaltime.change,
-  };
+  const { pageviews, visitors, visits, bounces, totaltime, comparison } = data || {};
+
+  const metrics = data
+    ? [
+        {
+          value: visitors,
+          label: formatMessage(labels.visitors),
+          change: visitors - comparison.visitors,
+          formatValue: formatLongNumber,
+        },
+        {
+          value: visits,
+          label: formatMessage(labels.visits),
+          change: visits - comparison.visits,
+          formatValue: formatLongNumber,
+        },
+        {
+          value: pageviews,
+          label: formatMessage(labels.views),
+          change: pageviews - comparison.pageviews,
+          formatValue: formatLongNumber,
+        },
+        {
+          label: formatMessage(labels.bounceRate),
+          value: (Math.min(visits, bounces) / visits) * 100,
+          prev: (Math.min(comparison.visits, comparison.bounces) / comparison.visits) * 100,
+          change:
+            (Math.min(visits, bounces) / visits) * 100 -
+            (Math.min(comparison.visits, comparison.bounces) / comparison.visits) * 100,
+          formatValue: n => `${Math.round(+n)}%`,
+          reverseColors: true,
+        },
+        {
+          label: formatMessage(labels.visitDuration),
+          value: totaltime / visits,
+          prev: comparison.totaltime / comparison.visits,
+          change: totaltime / visits - comparison.totaltime / comparison.visits,
+          formatValue: n =>
+            `${+n < 0 ? '-' : ''}${formatShortTime(Math.abs(~~n), ['m', 's'], ' ')}`,
+        },
+      ]
+    : null;
 
   return (
-    <div
-      ref={ref}
-      className={classNames(styles.container, {
-        [styles.sticky]: sticky,
-        [styles.isSticky]: isSticky,
-      })}
+    <LoadingPanel
+      data={metrics}
+      isLoading={isLoading}
+      isFetching={isFetching}
+      error={getErrorMessage(error)}
+      minHeight="136px"
     >
-      <MetricsBar isLoading={isLoading} isFetched={isFetched} error={error}>
-        {pageviews && visitors && (
-          <>
+      <MetricsBar>
+        {metrics?.map(({ label, value, prev, change, formatValue, reverseColors }) => {
+          return (
             <MetricCard
-              label={formatMessage(labels.views)}
-              value={pageviews.value}
-              change={pageviews.change}
+              key={label}
+              value={value}
+              previousValue={prev}
+              label={label}
+              change={change}
+              formatValue={formatValue}
+              reverseColors={reverseColors}
+              showChange={!isAllTime}
             />
-            <MetricCard
-              label={formatMessage(labels.visits)}
-              value={visits.value}
-              change={visits.change}
-            />
-            <MetricCard
-              label={formatMessage(labels.visitors)}
-              value={visitors.value}
-              change={visitors.change}
-            />
-            <MetricCard
-              label={formatMessage(labels.bounceRate)}
-              value={visitors.value ? (num / visitors.value) * 100 : 0}
-              change={
-                visitors.value && visitors.change
-                  ? (num / visitors.value) * 100 -
-                      (Math.min(diffs.visitors, diffs.bounces) / diffs.visitors) * 100 || 0
-                  : 0
-              }
-              format={n => Number(n).toFixed(0) + '%'}
-              reverseColors
-            />
-            <MetricCard
-              label={formatMessage(labels.averageVisitTime)}
-              value={
-                totaltime.value && pageviews.value
-                  ? totaltime.value / (pageviews.value - bounces.value)
-                  : 0
-              }
-              change={
-                totaltime.value && pageviews.value
-                  ? (diffs.totaltime / (diffs.pageviews - diffs.bounces) -
-                      totaltime.value / (pageviews.value - bounces.value)) *
-                      -1 || 0
-                  : 0
-              }
-              format={n => `${+n < 0 ? '-' : ''}${formatShortTime(Math.abs(~~n), ['m', 's'], ' ')}`}
-            />
-          </>
-        )}
+          );
+        })}
       </MetricsBar>
-      <div className={styles.actions}>
-        {showFilter && <WebsiteFilterButton websiteId={websiteId} className={styles.button} />}
-        <WebsiteDateFilter websiteId={websiteId} />
-      </div>
-    </div>
+    </LoadingPanel>
   );
 }
-
-export default WebsiteMetricsBar;

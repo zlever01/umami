@@ -1,53 +1,102 @@
-import { useDateRange, useLocale } from 'components/hooks';
+import { Button, Icon, ListItem, Row, Select, Text } from '@umami/react-zen';
 import { isAfter } from 'date-fns';
-import { getOffsetDateRange } from 'lib/date';
-import { Button, Icon, Icons } from 'react-basics';
-import DateFilter from './DateFilter';
-import styles from './WebsiteDateFilter.module.css';
-import { DateRange } from 'lib/types';
+import { useMemo } from 'react';
+import { useDateRange, useDateRangeQuery, useMessages, useNavigation } from '@/components/hooks';
+import { ChevronRight } from '@/components/icons';
+import { getDateRangeValue } from '@/lib/date';
+import { DateFilter } from './DateFilter';
 
-export function WebsiteDateFilter({ websiteId }: { websiteId: string }) {
-  const { dir } = useLocale();
-  const [dateRange, setDateRange] = useDateRange(websiteId);
-  const { value, startDate, endDate, offset } = dateRange;
-  const disableForward =
-    value === 'all' || isAfter(getOffsetDateRange(dateRange, 1).startDate, new Date());
-
-  const handleChange = (value: string | DateRange) => {
-    setDateRange(value);
-  };
-
-  const handleIncrement = (increment: number) => {
-    setDateRange(getOffsetDateRange(dateRange, increment));
-  };
-
-  return (
-    <div className={styles.container}>
-      {value !== 'all' && !value.startsWith('range') && (
-        <div className={styles.buttons}>
-          <Button onClick={() => handleIncrement(-1)}>
-            <Icon rotate={dir === 'rtl' ? 270 : 90}>
-              <Icons.ChevronDown />
-            </Icon>
-          </Button>
-          <Button onClick={() => handleIncrement(1)} disabled={disableForward}>
-            <Icon rotate={dir === 'rtl' ? 90 : 270}>
-              <Icons.ChevronDown />
-            </Icon>
-          </Button>
-        </div>
-      )}
-      <DateFilter
-        className={styles.dropdown}
-        value={value}
-        startDate={startDate}
-        endDate={endDate}
-        offset={offset}
-        onChange={handleChange}
-        showAllTime={true}
-      />
-    </div>
-  );
+export interface WebsiteDateFilterProps {
+  websiteId: string;
+  compare?: string;
+  showAllTime?: boolean;
+  showButtons?: boolean;
+  allowCompare?: boolean;
 }
 
-export default WebsiteDateFilter;
+export function WebsiteDateFilter({
+  websiteId,
+  showAllTime = true,
+  showButtons = true,
+  allowCompare,
+}: WebsiteDateFilterProps) {
+  const { dateRange, isAllTime, isCustomRange } = useDateRange();
+  const { formatMessage, labels } = useMessages();
+  const {
+    router,
+    updateParams,
+    query: { compare = 'prev', offset = 0 },
+  } = useNavigation();
+  const disableForward = isAllTime || isAfter(dateRange.endDate, new Date());
+  const showCompare = allowCompare && !isAllTime;
+
+  const websiteDateRange = useDateRangeQuery(websiteId);
+
+  const handleChange = (date: string) => {
+    if (date === 'all') {
+      router.push(
+        updateParams({
+          date: `${getDateRangeValue(websiteDateRange.startDate, websiteDateRange.endDate)}:all`,
+          offset: undefined,
+        }),
+      );
+    } else {
+      router.push(updateParams({ date, offset: undefined }));
+    }
+  };
+
+  const handleIncrement = increment => {
+    router.push(updateParams({ offset: Number(offset) + increment }));
+  };
+  const handleSelect = (compare: any) => {
+    router.push(updateParams({ compare }));
+  };
+
+  const dateValue = useMemo(() => {
+    return offset !== 0
+      ? getDateRangeValue(dateRange.startDate, dateRange.endDate)
+      : dateRange.value;
+  }, [dateRange]);
+
+  return (
+    <Row wrap="wrap" gap>
+      {showButtons && !isAllTime && !isCustomRange && (
+        <Row gap="1">
+          <Button onPress={() => handleIncrement(-1)} variant="outline">
+            <Icon rotate={180}>
+              <ChevronRight />
+            </Icon>
+          </Button>
+          <Button onPress={() => handleIncrement(1)} variant="outline" isDisabled={disableForward}>
+            <Icon>
+              <ChevronRight />
+            </Icon>
+          </Button>
+        </Row>
+      )}
+      <Row minWidth="200px">
+        <DateFilter
+          value={dateValue}
+          onChange={handleChange}
+          showAllTime={showAllTime}
+          renderDate={+offset !== 0}
+        />
+      </Row>
+      {showCompare && (
+        <Row alignItems="center" gap>
+          <Text weight="bold">VS</Text>
+          <Row width="200px">
+            <Select
+              value={compare}
+              onChange={handleSelect}
+              popoverProps={{ style: { width: 200 } }}
+            >
+              <ListItem id="prev">{formatMessage(labels.previousPeriod)}</ListItem>
+              <ListItem id="yoy">{formatMessage(labels.previousYear)}</ListItem>
+            </Select>
+          </Row>
+        </Row>
+      )}
+    </Row>
+  );
+}

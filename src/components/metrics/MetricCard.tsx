@@ -1,16 +1,18 @@
-import classNames from 'classnames';
-import { useSpring, animated } from '@react-spring/web';
-import { formatNumber } from 'lib/format';
-import styles from './MetricCard.module.css';
+import { useSpring } from '@react-spring/web';
+import { Column, Text } from '@umami/react-zen';
+import { AnimatedDiv } from '@/components/common/AnimatedDiv';
+import { ChangeLabel } from '@/components/metrics/ChangeLabel';
+import { formatNumber } from '@/lib/format';
 
 export interface MetricCardProps {
   value: number;
+  previousValue?: number;
   change?: number;
-  label: string;
+  label?: string;
   reverseColors?: boolean;
-  format?: typeof formatNumber;
-  hideComparison?: boolean;
-  className?: string;
+  formatValue?: (n: any) => string;
+  showLabel?: boolean;
+  showChange?: boolean;
 }
 
 export const MetricCard = ({
@@ -18,35 +20,37 @@ export const MetricCard = ({
   change = 0,
   label,
   reverseColors = false,
-  format = formatNumber,
-  hideComparison = false,
-  className,
+  formatValue = formatNumber,
+  showLabel = true,
+  showChange = false,
 }: MetricCardProps) => {
+  const diff = value - change;
+  const pct = ((value - diff) / diff) * 100;
   const props = useSpring({ x: Number(value) || 0, from: { x: 0 } });
-  const changeProps = useSpring({ x: Number(change) || 0, from: { x: 0 } });
+  const changeProps = useSpring({ x: Number(pct) || 0, from: { x: 0 } });
 
   return (
-    <div className={classNames(styles.card, className)}>
-      <animated.div className={styles.value} title={props?.x as any}>
-        {props?.x?.to(x => format(x))}
-      </animated.div>
-      <div className={styles.label}>
-        {label}
-        {~~change !== 0 && !hideComparison && (
-          <animated.span
-            className={classNames(styles.change, {
-              [styles.positive]: change * (reverseColors ? -1 : 1) >= 0,
-              [styles.negative]: change * (reverseColors ? -1 : 1) < 0,
-              [styles.plusSign]: change > 0,
-            })}
-            title={changeProps?.x as any}
-          >
-            {changeProps?.x?.to(x => format(x))}
-          </animated.span>
-        )}
-      </div>
-    </div>
+    <Column
+      justifyContent="center"
+      paddingX="6"
+      paddingY="4"
+      borderRadius="3"
+      backgroundColor
+      border
+    >
+      {showLabel && (
+        <Text weight="bold" wrap="nowrap">
+          {label}
+        </Text>
+      )}
+      <Text size="8" weight="bold" wrap="nowrap">
+        <AnimatedDiv title={value?.toString()}>{props?.x?.to(x => formatValue(x))}</AnimatedDiv>
+      </Text>
+      {showChange && (
+        <ChangeLabel value={change} title={formatValue(change)} reverseColors={reverseColors}>
+          <AnimatedDiv>{changeProps?.x?.to(x => `${Math.abs(~~x)}%`)}</AnimatedDiv>
+        </ChangeLabel>
+      )}
+    </Column>
   );
 };
-
-export default MetricCard;
